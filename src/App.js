@@ -6,19 +6,26 @@ import "./App.css"
 
 const App = () => {
   const [formData, setFormData] = useState({
-    description:"",
+    description: "",
     diagnosed: "",
-    physical_trauma:"",
-    mental_trauma:"",
-    experience_problem_often:"",
+    physical_trauma: "",
+    mental_trauma: "",
+    experience_problem_often: "",
     notrelevant: false,
-    lyingdown:false,
+    lyingdown: false,
     sitting: false,
-    standing:false,
+    standing: false,
     walking: false,
+    checkboxes: [
+      { name: "notrelevant", label: "Not relevant" },
+      { name: "lyingdown", label: "When lying down" },
+      { name: "sitting", label: "When sitting" },
+      { name: "standing", label: "Under standing" },
+      { name: "walking", label: "In walking" },
+    ],
     scale: '',
-    diagnosednew:"",
-    experience_problem_oftennew:"",
+    diagnosednew: "",
+    experience_problem_oftennew: "",
   });
 
   const [currentPage, setCurrentPage] = useState("form");
@@ -40,7 +47,7 @@ const App = () => {
     setCurrentPage("form");
   };
 
-  
+
   return (
     <div className="container mt-5">
       {currentPage === "form" && (

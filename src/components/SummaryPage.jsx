@@ -8,14 +8,14 @@ const SummaryPage = ({ formData, onChange, onBack }) => {
     <div >
       <h2>Summary Page</h2>
       <table >
-      <thead>
+        <thead>
           <tr>
             <th>Problems</th>
             <th>answers</th>
           </tr>
         </thead>
         <tbody>
-        <tr>
+          <tr>
             <td>Description</td>
             <td>{formData.description}</td>
           </tr>
